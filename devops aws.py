@@ -1,5 +1,10 @@
 #devops 1
 
+'''
+main guide from AWS example implementation 
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/python/example_code/ec2/instance.py
+'''
+
 import time
 import boto3
 from boto3 import ec2
