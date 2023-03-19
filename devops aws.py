@@ -32,7 +32,7 @@ def create(ImageID,InstanceType,KeyName):
     instance = ec2.create_instances(ImageId="ami-0dafa01c8100180f8", MinCount=1, MaxCount=1, InstanceType="t2.micro", KeyName="111")
     '''
 
-def destroy():
+def destroy(instance):
     if instance is None:
             print("No instance to terminate.")
             return
@@ -49,9 +49,9 @@ def main():
     main 
     """
     input = specs()
-    create(input[0],input[1],input[2])
+    instsance=create(input[0],input[1],input[2])
     time.sleep(90)
-    destroy()
+    destroy(instance)
     print()
 
 if __name__ == '__main__':
